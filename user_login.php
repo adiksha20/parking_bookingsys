@@ -6,7 +6,7 @@ session_start();
 if($_POST){
 
 $_SESSION['username'] = $_POST['username'];
-$_SESSION['password'] = $_POST['password'];
+$_SESSION['password'] = md5($_POST['password']);
 
 if($_SESSION['username'] && $_SESSION['password'])
 {
